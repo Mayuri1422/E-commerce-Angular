@@ -1,0 +1,96 @@
+.header {
+    max-width: 100%;
+    box-shadow: 5px 5px 20px gray;
+    overflow: hidden;
+}
+
+.brand {
+    color: white;
+    margin-left: 2%;
+    padding: 0.8em;
+    width: 23%;
+}
+
+.search-box {
+    width: 75%;
+    height: 2.5em;
+    display: inline-block;
+    border: none;
+}
+
+.search-button {
+    width: 10%;
+    height: 2.5em;
+    border: none;
+    background-color: #dadada;
+}
+
+.dropdown {
+    width: 15%;
+    height: 2.5em;
+    border: none;
+    background-color: #dadada;
+    font-weight: 600;
+}
+
+.login-container {
+    color: white;
+    display: inline-block;
+    width: 15%;
+    text-align: right;
+    margin: 1.7em 0.2em 0 0;
+
+    h6 {
+        display: inline-block;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.user-icon {
+    margin-right: 0.5em;
+    padding: 0.2em;
+    font-size: 1.3em;
+}
+
+.cart-wishlist {
+    width: 7%;
+    margin-top: 1.7em;
+    margin-left: 0.5em;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-item {
+    color: white;
+    list-style-type: none;
+    font-size: 1.3em;
+    margin-right: .5em;
+}
+
+.user-container{
+    margin: 1.5em 0.2em 0 1.5em; 
+    color: white;
+    display: inline-block;
+    width: 15%;
+    text-align: right;
+}
+
+.user-dropdown{
+    background-color: #212529;
+    width: 11em;
+    position: absolute;
+    z-index: 1000;
+
+}
+
+.user-dropdown-button{
+    background-color: #212529;
+    border-color: #212529;
+}

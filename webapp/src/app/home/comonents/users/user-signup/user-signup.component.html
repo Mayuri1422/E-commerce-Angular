@@ -1,0 +1,152 @@
+<div class="container mt-5 mb-5 p-4 w-50 shadow">
+  <h2 class="text-center mb-4">SignUp Form</h2>
+  <form [formGroup]="userSignupForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name*</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        formControlName="firstName"
+        placeholder="Enter your first name"
+      />
+      <span
+        class="text-danger"
+        *ngIf='firstName?.touched && firstName?.errors?.["required"]'
+      >
+        First Name is required
+      </span>
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        formControlName="lastName"
+        placeholder="Enter your last name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="address"
+        formControlName="address"
+        placeholder="Enter your address"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="city" class="form-label">City</label>
+      <input
+        type="text"
+        class="form-control"
+        id="city"
+        formControlName="city"
+        placeholder="Enter your city"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="state" class="form-label">State</label>
+      <input
+        type="text"
+        class="form-control"
+        id="state"
+        formControlName="state"
+        placeholder="Enter your state"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="pin" class="form-label">Pin Code</label>
+      <input
+        type="text"
+        class="form-control"
+        id="pin"
+        formControlName="pin"
+        placeholder="Enter your pin code"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email*</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+        placeholder="Enter your email"
+      />
+      <span
+        class="text-danger"
+        *ngIf='email?.touched && email?.errors?.["required"]'
+      >
+        Email is required
+      </span>
+      <span
+        class="text-danger"
+        *ngIf='email?.touched && email?.errors?.["email"]'
+      >
+        Enter Valid Email Address
+      </span>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password*</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+        placeholder="Enter your password"
+      />
+      <span
+        class="text-danger"
+        *ngIf='password?.touched && password?.errors?.["required"]'
+      >
+        Password is required
+      </span>
+    </div>
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password*</label>
+      <input
+        type="password"
+        class="form-control"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        placeholder="Confirm your password"
+      />
+      <span
+        class="text-danger"
+        *ngIf='confirmPassword?.touched && confirmPassword?.errors?.["required"]'
+      >
+        Confirm Password is required
+      </span>
+      <span
+        class="text-danger"
+        *ngIf='confirmPassword?.touched && userSignupForm.errors?.["passwordMismatch"]'
+      >
+        Password's Don't Match
+      </span>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-warning"
+      [disabled]="!userSignupForm.valid"
+    >
+      SignUp
+    </button>
+
+    <div
+      class="alert mt-2"
+      [ngClass]="
+        alertType === 0
+          ? 'alert-success'
+          : alertType === 1
+          ? 'alert-warning'
+          : 'alert-danger'
+      "
+      *ngIf="alertMessage !== ''"
+    >
+      {{ alertMessage }}
+    </div>
+  </form>
+</div>

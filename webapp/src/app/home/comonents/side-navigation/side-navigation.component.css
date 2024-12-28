@@ -1,0 +1,60 @@
+.side-navigation {
+  margin-top: 0.5em;
+  padding: 0.6em;
+  box-shadow: 1px 0px 14px lightgray;
+  border-radius: 1em;
+}
+
+.side-navigation .section-title {
+  padding: 1em;
+}
+
+.section-title h3 {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.indivisual-category {
+  border: none;
+  margin-bottom: 0.7em;
+}
+
+
+.accordion-button {
+  background-color: lightblue;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.85em;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+
+.indivisual-category ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.sub-items {
+  margin-bottom: 0.6em;
+  text-align: center;
+}
+
+.sub-items a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
+  cursor:pointer;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  transition: all 0.3s ease-in-out;
+}
